@@ -1,6 +1,6 @@
 package dev.dane.pondserver.core.config
 
-import dev.dane.pondserver.user.service.UserService
+import dev.dane.pondserver.user.UserService
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.Authentication

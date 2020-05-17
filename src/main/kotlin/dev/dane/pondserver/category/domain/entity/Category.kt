@@ -23,7 +23,7 @@ class Category (
     var user : User,
 
     @OneToMany(mappedBy = "category")
-    var events : List<Event>,
+    var events : List<Event>? = null,
 
     @CreationTimestamp
     @Column(name = "CREATED_DATE", updatable = false)

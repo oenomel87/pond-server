@@ -1,4 +1,4 @@
-package dev.dane.pondserver.user.domain.repository
+package dev.dane.pondserver.category.domain.repository
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -7,12 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
+@ExtendWith(SpringExtension::class)
 @SpringBootTest
-class UserRepositoryTests @Autowired constructor(val userRepository: UserRepository) {
+class CategoryRepositoryTests @Autowired constructor(private val categoryRepository: CategoryRepository) {
 
     @Test
-    fun `When findAll then return user list` () {
-        val users = this.userRepository.findAll()
-        assertThat(users).isNotEmpty
+    fun `When findAll then return category list` () {
+        val categories = this.categoryRepository.findAll()
+        assertThat(categories).isNotNull
     }
 }

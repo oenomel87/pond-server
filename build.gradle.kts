@@ -10,7 +10,7 @@ plugins {
 
 group = "dev.dane"
 version = "1.0"
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 val developmentOnly by configurations.creating
 configurations {
