@@ -2,7 +2,6 @@ package dev.dane.pondserver.user.domain.entity
 
 import dev.dane.pondserver.category.domain.entity.Category
 import dev.dane.pondserver.event.domain.entity.Event
-import jdk.vm.ci.meta.Local
 import org.hibernate.annotations.CreationTimestamp
 import java.time.LocalDateTime
 import javax.persistence.*

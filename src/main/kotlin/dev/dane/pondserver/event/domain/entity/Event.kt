@@ -1,6 +1,7 @@
 package dev.dane.pondserver.event.domain.entity
 
 import dev.dane.pondserver.category.domain.entity.Category
+import dev.dane.pondserver.core.common.enum.EventType
 import dev.dane.pondserver.user.domain.entity.User
 import org.hibernate.annotations.CreationTimestamp
 import java.time.LocalDate
@@ -8,7 +9,7 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
-@Table(name = "Event")
+@Table(name = "EVENT")
 class Event (
 
     @Id
@@ -19,7 +20,11 @@ class Event (
     @Column(name = "NAME", columnDefinition = "VARCHAR(20)", nullable = false)
     var name : String,
 
-    @Column(name = "AMOUNT", columnDefinition = "BIGINT(20", nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TYPE", columnDefinition = "VARCHAR(10)", nullable = false)
+    var type : EventType,
+
+    @Column(name = "AMOUNT", columnDefinition = "BIGINT(30)", nullable = false)
     val amount : Long,
 
     @Column(name = "EVENT_DATE", columnDefinition = "DATE", nullable = false)

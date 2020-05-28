@@ -2,6 +2,7 @@ package dev.dane.pondserver.event.service
 
 import dev.dane.pondserver.event.EventService
 import dev.dane.pondserver.event.domain.repository.EventRepository
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -17,6 +18,8 @@ class EventServiceTests @Autowired constructor(private val eventService: EventSe
 
     @Test
     fun sumTotalEventAmountTest() {
-
+        val answer = 803156L
+        val result = this.eventService.sumTotalEventAmount("dummy-user")
+        Assertions.assertEquals(answer, result)
     }
 }
