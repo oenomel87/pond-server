@@ -2,7 +2,7 @@ package dev.dane.pondserver.core.config.jwt
 
 object JWTConstants {
 
-    const val AUTH_PATH : String = "/api/auth"
+    const val AUTH_PATH : String = "/auth"
 
     const val JWT_SECRET : String = "VkYp3s6v8y/B?E(H+MbQeThWmZq4t7w!z\$C&F)J@NcRfUjXn2r5u8x/A?D*G-KaP"
 

@@ -27,7 +27,7 @@ class SecurityConfig (val userService : UserService, val customUserDetailsServic
                 .httpBasic().disable()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/beat", "/api/auth").permitAll()
+                .antMatchers("/beat", "/auth", "/signup").permitAll()
                 .anyRequest().authenticated()
             .and()
                 .addFilter(JWTAuthenticationFilter(authenticationManager()))
